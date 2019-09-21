@@ -1,0 +1,50 @@
+<!-- Login.html -->
+<!DOCTYPE HTML>
+
+{% load staticfiles %}
+<HTML>
+  <HEAD>
+  	<meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="{% static 'css/bootstrap-4-navbar.css' %}" rel="stylesheet">
+  </HEAD>
+  <BODY>
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-sm text-center">
+    			<div class="card mt-3 mb-3 mx-auto" style="width: 20rem;">
+    				<div class="card-header text-center">
+    					<img src="{% static 'img/image002.jpg' %}" style="height: 100px;">
+    				</div>
+    				<div class="card-body w-100 align-items-center d-flex justify-content-center">
+    					<form action="{% url 'x_cloud:Login' %}" method="POST">
+    						{% csrf_token %}
+    						<table class="table">
+    							<tr>
+    								<th class="login_header">佳茲美容所</th>
+    							</tr>
+    							<tr scope="col">
+    								<td><input type="text" name="username" placeholder="請輸入 ID 編號"></td>
+    						    </tr>
+    						    <tr scope="col">
+    								<td><input type="password" name="password" placeholder="請輸入密碼"></td>
+    						    </tr>
+    						    <tr scope="col">
+    								<td class="text-center"><button type="submit" name="submit" class="btn btn-primary">登入</button></td>
+    						    </tr>
+    					    </table>
+    					</form>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </BODY>
+</HTML>
