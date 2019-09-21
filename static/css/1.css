@@ -2,3 +2,12 @@
 	font-size: 2rem;
 	font-family: DFKai-sb;
 }
+
+.menu-font {
+	font-size: 2rem;
+	font-family: 微軟正黑體;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	
+}

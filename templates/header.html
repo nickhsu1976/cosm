@@ -1,0 +1,16 @@
+<!-- header.html -->
+
+{% load staticfiles %}
+{% block header %}
+   <nav class="navbar navbar-expand-sm bg-light navbar-light">
+   	<a class="navbar-brand" href="{% url 'x_cloud:index' %}">首頁</a>
+   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+   		<span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="nav-item nav-link menu-font active" href="#">預約<span class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link menu-font" href="#">會員</a>
+    <a class="nav-item nav-link menu-font" href="#">查詢</a>
+    <a class="nav-item nav-link menu-font" href="#">連結</a>
+    <a class="nav-item nav-link menu-font" href="#">登出</a>
+   </nav>
+{% endblock %}

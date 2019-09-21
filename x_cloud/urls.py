@@ -21,5 +21,6 @@ app_name = 'x_cloud'
 
 urlpatterns = [
     path('', views.Login, name='Login'),
+    path('index/', views.Index, name='index'),
     path('admin/', admin.site.urls),
 ]
